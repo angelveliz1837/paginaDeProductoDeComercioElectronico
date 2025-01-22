@@ -1,0 +1,444 @@
+.contenedor{
+    position: relative;
+}
+
+.contenedor1{
+    padding: 0em 10em;
+    font-family: "Kumbh Sans", serif;
+    position: absolute;
+    z-index: 1;
+}
+
+    .bloque1{
+        display: grid;
+        grid-template-columns: 15% 75% 5% 5%;
+        align-content: center;
+        border-bottom: 1px solid hsl(220, 14%, 75%);
+    }
+
+    .bloque1 div{
+        align-content: center;
+    }
+
+    .bloque1 .logo{
+        padding-bottom: 1em;
+    }
+
+    .navegador{
+        display: flex;
+        flex-direction: row;
+        text-align: start;
+        margin-bottom: 0em;
+    }
+
+    .raya li{
+        list-style: none;
+        text-align: center;
+        padding: 0em 1.5em;
+        cursor: pointer;
+    }
+
+    .raya{
+        padding: 1em 0em 4em 0em;
+    }
+
+    .raya:hover{
+        border-bottom: 3px solid hsl(26, 100%, 55%);
+    }
+
+    .carrito{
+        margin-top: 1em;
+        cursor: pointer;
+    }
+
+    .usuario{
+        margin-top: 1em;
+    }
+
+    .usuario img{
+        width: 3em;
+        cursor: pointer;
+    }
+
+    .usuario img:hover{
+        border-radius: 50%;
+        border: 3px solid hsl(26, 100%, 55%);
+    }
+
+    .bloque2{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-top: 4.2em;
+    }
+
+    .imagenes{
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .imagen_principal{
+        padding: 1em 1em 2em 1em;
+        margin: 0em 0em 0em 0em;
+    }
+
+    .imagen_principal img{
+        width: 100%;
+        height: 95%;
+        border-radius: 20px;
+    }
+
+    .cuadro{
+        display: flex;
+        flex-direction: row;
+        margin-top: -1em;
+    }
+
+    .subimagen{
+        padding: 0.3em 1em;
+        margin-top: -1em;
+    }
+
+    .subimagen img{
+        border-radius: 15px;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .subimagen img:hover{
+        background-color: hsl(25, 100%, 94%);
+        opacity: 0.5;
+    }
+
+    .seleccionado1{
+        border: 3px solid hsl(26, 100%, 55%);
+        background-color: hsl(25, 100%, 94%);
+        opacity: 0.5;
+    }
+
+    .compra{
+        display: flex;
+        flex-direction: column;
+        padding: 7.5em 3em 7em 6em;
+    }
+
+    .texto h3{
+        color: hsl(219, 9%, 45%);
+        text-transform: uppercase;
+        margin: 0em;
+        font-size: 0.9em;
+        letter-spacing: 2px;
+    }
+
+    .texto h1{
+        font-size: 2.7em;
+        margin: 0.3em 0em 0.7em 0em;
+    }
+
+    .texto p{
+        color: hsl(219, 9%, 45%);
+        line-height: 2em;
+    }
+
+    .cuenta{
+        display: flex;
+        flex-direction: row;
+        padding: 0.7em 0em;
+    }
+
+    .precio_descuento{
+        font-size: 1.9em;
+        color: hsl(0, 0%, 0%);
+        font-weight: 700;
+    }
+
+    .descuento{
+        background-color: hsl(0, 0%, 0%);
+        color: hsl(0, 0%, 100%);
+        border-radius: 5px;
+        align-content: center;
+        padding: 0.2em 0.8em;
+        margin: 1em 0.5em 0.2em 1.5em;
+        font-size: 0.8em;
+        
+    }
+
+    .precio{
+        color: hsl(220, 14%, 75%);
+        text-decoration: line-through;
+        padding: 0.5em 0em 2em 0em;
+    }
+
+    .registro{
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    .conteo{
+        display: flex;
+        flex-direction: row;
+        background-color: hsl(223, 64%, 98%);
+        text-align: center;
+        align-content: center;
+        border-radius: 10px;
+        margin-right: 1em;
+    }
+
+    .conteo div{
+        align-content: center;
+        width: 100%;
+    }
+
+    .anterior{
+        padding-right: 1em;
+    }
+
+    .anterior img, .posterior img{
+        cursor: pointer;
+    }
+
+    .boton{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        background-color: hsl(26, 100%, 55%);
+        border-radius: 10px;
+        cursor: pointer;
+    }        
+    
+    .boton:hover{
+        background-color: hsl(25, 100%, 94%);
+    }
+
+    .icono{
+        text-align: end;
+        align-content: center;
+        padding-right: 0.5em;
+        margin-top: 0.1em;
+    }
+
+    .icono path {
+        fill: hsl(0, 0%, 0%);
+    }
+
+    .boton_texto{
+        padding: 0em 0.5em;
+        font-weight: 700;
+    }
+
+/* MUESTRA */
+.contenedor2{
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+
+    .contenedor2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: hsl(220, 13%, 13%);
+        opacity: 0.8;
+        z-index: -1;
+    }
+
+    .atras{
+        position: absolute;
+        background-color: hsl(223, 64%, 98%);
+        border-radius: 50%;
+        padding: 1.1em;
+        top: 420px;
+        left: 425px;
+        cursor: pointer;
+    }
+
+    .atras:hover{
+        background-color: hsl(0, 0%, 100%);
+    }
+
+    .atras:hover path {
+        stroke: hsl(26, 100%, 55%);
+    }
+
+    .adelante{
+        position: absolute;
+        background-color: hsl(223, 64%, 98%);
+        border-radius: 50%;
+        padding: 1.1em;
+        top: 420px;
+        left: 1030px;
+        cursor: pointer;
+    }
+
+    .adelante:hover path{
+        stroke: hsl(26, 100%, 55%);
+    }
+
+    .cuadro_fotos{
+        padding: 5.5em 28em 0em 28em;
+    }
+
+    .cerrar{
+        text-align: end;
+        padding: 1em 0em;
+        cursor: pointer;
+    }
+
+    .cerrar path{
+        fill: hsl(26, 100%, 55%);
+    }
+
+    .fotos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .foto_principal{
+        padding: 0.3em 0em;
+    }
+
+    .foto_principal img{
+        width: 100%;
+        border-radius: 20px;
+        opacity: 1;
+    }
+
+    .fotitos{
+        display: flex;
+        flex-direction: row;
+        padding: 0em 2em;
+    }
+
+    .subfoto{
+        padding: 2em 1em 1em 1em;
+    }
+
+    .subfoto img{
+        border-radius: 15px;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .subfoto img:hover{
+        background-color: hsl(25, 100%, 94%);
+        opacity: 0.7;
+    }
+
+    .seleccionado2{
+        border: 3px solid hsl(26, 100%, 55%);
+        background-color: hsl(25, 100%, 94%);
+        opacity: 0.75;
+        cursor: pointer;
+    }
+
+/* CARRITO VACIO */
+.contenedor3{
+    position: absolute;
+    z-index: 10;
+    background-color: hsl(0, 0%, 100%);
+    border: 1px solid black;
+    font-family: "Kumbh Sans", serif;
+    border-radius: 10px;
+    top: 100px;
+    left: 1049px;
+    display: none;
+}
+
+    .carrito_vacio h1{
+        padding: 0em 1em 1em 1em;
+    }
+
+    .carritov_texto{
+        align-content: center;
+        text-align: center;
+        color: hsl(219, 9%, 45%);
+    }
+
+    .carritov_texto p{
+        padding: 4.5em 8em;
+    }
+
+/* CONTADOR */
+.contenedor4{
+    position: absolute;
+    z-index: 10;
+    top: 200px;
+    left:1050px;
+    width: 391px;
+    display: none;
+}
+
+    .linea{
+        display: grid;
+        grid-template-columns: 20% 70% 10%;
+        width: 100%;
+        padding: 1em 0em 1em 0em;
+        background-color: hsl(0, 0%, 100%);
+    }
+
+    .linea div{
+        align-content: center;
+    }
+
+    .foto_compra{
+        padding-left: 1em;
+    }
+
+
+    .foto_compra img{
+        width: 4em;
+        border-radius: 5px;
+    }
+
+    .linea_texto{
+        padding-left: 1em;
+        align-content: start;
+        font-size: 1.1em;
+        font-family: "Kumbh Sans", serif;
+    }
+
+    .linea_texto p{
+        margin-top: 0em;
+        margin-bottom: 0.5em;
+    }
+
+    .checkout{
+        text-align: center;
+        width: calc(100% - 2em);
+        padding: 0.7em 1em 1.3em 1em;
+        font-family: "Kumbh Sans", serif;
+    }
+
+    .checkout button{
+        background-color: hsl(26, 100%, 55%);
+        width: 100%;
+        padding: 1.2em 0em;
+        margin-bottom: 1em;
+        border-radius: 10px;
+        border: none;
+        font-weight: 700;
+    }
+
+.contenedor5{
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    left:1225px;
+    display: none;
+    cursor: pointer;
+}
+
+    .contador{
+        background-color: hsl(26, 100%, 55%);
+        color: hsl(223, 64%, 98%);
+        font-family: "Kumbh Sans", serif;
+        border-radius: 0.5em;
+        text-align: center;
+        padding: 0em 1em;
+        margin: 1em 0em 2em 1em;
+        font-size: 0.6em;
+        font-weight: 700;
+    }
+
