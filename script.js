@@ -1,8 +1,13 @@
 document.addEventListener('DOMContentLoaded', function(){
+    const contenedor1 = document.querySelector('.contenedor1');
+    const bloque1 = document.querySelector('.bloque1');
     const contenedor2 = document.querySelector('.contenedor2');
     const contenedor3 = document.querySelector('.contenedor3');
     const contenedor4 = document.querySelector('.contenedor4');
     const contenedor5 = document.querySelector('.contenedor5');
+    const contenedor6 = document.querySelector('.contenedor6');
+    const contenedor7 = document.querySelector('.contenedor7');
+
     //Funcion para mostrar la fotos 
     const imagen_principal = document.querySelector('.imagen_principal');
     const cerrar = document.querySelector('.cerrar');
@@ -42,6 +47,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
     //Crear un media query si es menor a 375px
     const mediaQuery = window.matchMedia("(max-width: 375px)");
+
+    //Botones para el mobil
+    const iconoMenu = document.querySelector('.icono_menu');
+    const aspaNuevo = document.querySelector('.cerrar_nuevo');
 
 //Funcion para mostrar la fotos 
     const mostrarFotos = function(){
@@ -176,4 +185,66 @@ document.addEventListener('DOMContentLoaded', function(){
         const total = cantidad * precio;
         resultado.textContent = `$${total.toFixed(2)}`;
     };
+
+//PARTE MOBIL
+//Funcion para mobil
+    mediaQuery.addEventListener("change", function(){
+        if(mediaQuery.matches){
+            bloque1.style.display = "grid";
+            contenedor2.style.display = "block";
+            contenedor3.style.display = "none";
+            contenedor4.style.display = "none";
+            contenedor5.style.display = "none";
+            contenedor6.style.display = "none";
+            contenedor7.style.display = "none";
+            iconoMenu.style.display = "block";
+        }else{
+            contenedor1.style.display = "block";
+            contenedor2.style.display = "none";
+            contenedor3.style.display = "none";
+            contenedor4.style.display = "none";
+            contenedor5.style.display = "none";
+            contenedor6.style.display = "none";
+            contenedor7.style.display = "none";
+            iconoMenu.style.display = "none"
+        }
+    });
+
+    if(mediaQuery.matches){
+        bloque1.style.display = "grid";
+        contenedor2.style.display = "block";
+        contenedor3.style.display = "none";
+        contenedor4.style.display = "none";
+        contenedor5.style.display = "none";
+        contenedor6.style.display = "none";
+        contenedor7.style.display = "none";
+        iconoMenu.style.display = "block";
+    }else{
+        contenedor1.style.display = "block";
+        contenedor2.style.display = "none";
+        contenedor3.style.display = "none";
+        contenedor4.style.display = "none";
+        contenedor5.style.display = "none";
+        contenedor6.style.display = "none";
+        contenedor7.style.display = "none";
+        iconoMenu.style.display = "none"
+    }
+
+//Funcion para ver menu
+    const verMenu = function(){
+        contenedor6.style.display = "block";
+        contenedor7.style.display = "block";
+        iconoMenu.style.display = "none";
+        aspaNuevo.style.display = "block";
+    }
+    iconoMenu.addEventListener("click", verMenu);
+
+    const cerrarMenu = function(){
+        contenedor6.style.display = "none";
+        contenedor7.style.display = "none";
+        iconoMenu.style.display = "block";
+        aspaNuevo.style.display = "none";
+    }
+    aspaNuevo.addEventListener("click", cerrarMenu)
+
 });
